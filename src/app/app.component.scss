@@ -1,0 +1,20 @@
+*{
+    height: auto;
+}
+.section_shared{
+    display: flex;
+}
+.container-shared-picture{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+    margin: 20px;
+
+}
+.container-shared-spot{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+    margin: 20px;
+
+}

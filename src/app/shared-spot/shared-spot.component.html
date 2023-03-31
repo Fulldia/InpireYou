@@ -1,0 +1,8 @@
+<div class="share-spot">
+<h2>{{sharedSpot.title}}</h2>
+    <div class="app-shared-spot-image"><img [src]="sharedSpot.imageURL" [alt]="sharedSpot.title"/></div>
+<p>
+    <button type="button" class="btn btn-primary" (click)="spotLike()" [ngClass]="{'bg-primary': isPrimary, 'bg-secondary': isSecondary}">{{buttonText}}</button>
+    👍 {{sharedSpot.likes}}
+</p>
+</div>

@@ -8,14 +8,13 @@ import { SharedPicture } from '../models/shared-picture.model';
 })
 
 /*DECLARATION DE LA CLASSE DU COMPONENT et DEFINITION DES VARIABLES*/
+//Un composant est responsable de la gestion des templates et des données affichées à l'utilisateur.
+//Chaque composant est associé à un template et à une classe de contrôleur qui définit le comportement du composant.
+
+
 export class SharedPictureComponent implements OnInit {
   @Input() sharedPicture!: SharedPicture; //input décorateur qui va permettre d'injecter le modèle dans le component et utiliser l'object dans le parent app.component
 
-  title!:string;  
-  description!:string;
-  createdDate!:Date;
-  likes!: number;
-  imageURL!:string;
   buttonText!:string;
   btn: any;
   isPrimary = false;

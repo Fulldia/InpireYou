@@ -3,11 +3,10 @@
 //Soit par un service qui appelle une API pour récupérer les données, ou pour gérer l'authentification et l'autorisation
 
 //On déclare une classe avec ses propriétés
-export class SharedPicture {
+export class SharedSpot {
 
     //On créé un constructeur d'objet pour pouvoir réutiliser le modèle
-    constructor(public title: string, 
-                public description: string, 
+    constructor(public title: string,               
                 public createdDate: Date, 
                 public likes: number, 
                 public imageURL: string){
