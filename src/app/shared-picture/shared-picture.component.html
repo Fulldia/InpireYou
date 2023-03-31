@@ -1,0 +1,17 @@
+
+    <div class="card" style="width: 25rem;">
+        <img class="card-img-top" [src]="sharedPicture.imageURL" [alt]="title"/>
+        <div class="card-body">
+          <h5 class="card-title">{{sharedPicture.title}}</h5>
+          <p class="card-text">{{sharedPicture.description}}</p>
+          <p class="card-text"><small class="text-muted">Mise en ligne le {{sharedPicture.createdDate}}</small></p>
+          <p>
+            <button type="button" class="btn btn-primary" (click)="pictureLike()" [ngClass]="{'bg-primary': isPrimary, 'bg-secondary': isSecondary}">{{buttonText}}</button>
+            👍 {{sharedPicture.likes}}
+        </p>
+        </div>
+    </div>
+ 
+   
+
+
