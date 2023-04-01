@@ -4,12 +4,11 @@
 
 //On déclare une classe avec ses propriétés
 export class SharedPicture {
-
-    //On créé un constructeur d'objet pour pouvoir réutiliser le modèle
-    constructor(public title: string, 
-                public description: string, 
-                public createdDate: Date, 
-                public likes: number, 
-                public imageURL: string){
-    }
+    //Ici on aurait pu créer un constructeur d'objet pour pouvoir réutiliser le modèle (mais on peut très bien ne pas le faire ex: modele spot)
+    title!: string;
+    description?: string; 
+    createdDate!: Date;
+    likes!: number;
+    imageURL!: string;
+    location?:string  //? rend la props optionnelle !
 }

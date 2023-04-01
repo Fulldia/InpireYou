@@ -1,14 +1,9 @@
 <section class="section_shared">
     <div class="container-shared-picture">
-        <app-shared-picture [sharedPicture]="myPicture" ></app-shared-picture>
-        <app-shared-picture [sharedPicture]="myOtherPicture" ></app-shared-picture>
-        <app-shared-picture [sharedPicture]="myPicture" ></app-shared-picture>
-        <app-shared-picture [sharedPicture]="myOtherPicture" ></app-shared-picture>
+        <app-shared-picture *ngFor="let picture of sharedPicture" [sharedPicture]="picture" ></app-shared-picture> <!--picture = item / sharedPicture = nom du tableau -->
     </div>
-    <div class="container-shared-sport">
-        <app-shared-spot [sharedSpot]="mySpot"></app-shared-spot>   
-        <app-shared-spot [sharedSpot]="mySpot"></app-shared-spot>   
-        <app-shared-spot [sharedSpot]="mySpot"></app-shared-spot>    
+    <div class="container-shared-spot">
+        <app-shared-spot *ngFor="let spot of sharedSpot" [sharedSpot]="spot" ></app-shared-spot>
     </div>
     
 </section>

@@ -4,11 +4,8 @@
 
 //On déclare une classe avec ses propriétés
 export class SharedSpot {
-
-    //On créé un constructeur d'objet pour pouvoir réutiliser le modèle
-    constructor(public title: string,               
-                public createdDate: Date, 
-                public likes: number, 
-                public imageURL: string){
-    }
+    title!: string;             
+    createdDate!: Date;   
+    likes!: number;  
+    imageURL!: string;
 }

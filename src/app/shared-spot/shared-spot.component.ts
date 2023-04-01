@@ -35,10 +35,7 @@ export class SharedSpotComponent {
       this.isPrimary = !this.isPrimary;
       this.isSecondary = !this.isSecondary;
     }
- 
 
-
-    
   }
  
 }
