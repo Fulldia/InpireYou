@@ -16,10 +16,6 @@ export class SharedPictureComponent implements OnInit {
   @Input() sharedPicture!: SharedPicture; //input décorateur qui va permettre d'injecter le modèle dans le component et utiliser l'object dans le parent app.component
 
   buttonText!:string;
-  btn: any;
-  isPrimary = false;
-  isSecondary = true;
-
 
   /*INITIALISATION DES VARIABLES*/
   ngOnInit(){ /*on initialise la donnée grâce à la méthode ngOnInit, implémenté par l'interface OnInit*/
@@ -32,15 +28,11 @@ export class SharedPictureComponent implements OnInit {
     if (this.buttonText === "J'aime"){    
       this.sharedPicture.likes++;
       this.buttonText="Je n'aime plus";   
-      this.isPrimary = !this.isPrimary;
-      this.isSecondary = !this.isSecondary;   
     }
     /*si pictureLike est déjà cliqué, on décrémente*/
     else{    
       this.sharedPicture.likes--;
       this.buttonText="J'aime";
-      this.isPrimary = !this.isPrimary;
-      this.isSecondary = !this.isSecondary;
     }
  
 

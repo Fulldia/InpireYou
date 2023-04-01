@@ -4,12 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { SharedPictureComponent } from './shared-picture/shared-picture.component';
 import { SharedSpotComponent } from './shared-spot/shared-spot.component';
+import { PhotographComponent } from './photograph/photograph.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SharedPictureComponent,
-    SharedSpotComponent
+    SharedSpotComponent,
+    PhotographComponent
   ],
   imports: [
     BrowserModule

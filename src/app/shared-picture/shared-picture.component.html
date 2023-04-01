@@ -6,8 +6,8 @@
           <p class="card-text" *ngIf="sharedPicture.description">{{sharedPicture.description}}</p>
           <p class="card-text"><small class="text-muted">Mise en ligne le {{sharedPicture.createdDate}}</small></p>
           <p>
-            <button type="button" class="btn btn-primary" (click)="pictureLike()" [ngClass]="{'bg-primary': isPrimary, 'bg-secondary': isSecondary}">{{buttonText}}</button>
-            👍 {{sharedPicture.likes}}
+            <button type="button" class="btn btn-primary" (click)="pictureLike()" [ngClass]="{'btn-success': buttonText==='Je n\'aime plus'}">{{buttonText}}</button>
+            <span [ngStyle]="{ color : 'rgb(0,' + sharedPicture.likes*5 + ',0)'}">👍 {{sharedPicture.likes}}</span> <!--la valeur du vert augmente quand le nb de facesnap augmente-->
         </p>
         </div>
     </div>

@@ -9,10 +9,6 @@ import { SharedSpot } from '../models/shared-spot.model';
 export class SharedSpotComponent {
   @Input() sharedSpot!: SharedSpot;
   buttonText!:string;
-  btn: any;
-  isPrimary = false;
-  isSecondary = true;
-
 
   /*INITIALISATION DES VARIABLES*/
   ngOnInit(){ /*on initialise la donnée grâce à la méthode ngOnInit, implémenté par l'interface OnInit*/
@@ -24,16 +20,12 @@ export class SharedSpotComponent {
     /*si pictureLike n'est pas cliqué, on incrémente*/
     if (this.buttonText === "J'aime"){    
       this.sharedSpot.likes++;
-      this.buttonText="Je n'aime plus";   
-      this.isPrimary = !this.isPrimary;
-      this.isSecondary = !this.isSecondary;   
+      this.buttonText="Je n'aime plus";    
     }
     /*si pictureLike est déjà cliqué, on décrémente*/
     else{    
       this.sharedSpot.likes--;
       this.buttonText="J'aime";
-      this.isPrimary = !this.isPrimary;
-      this.isSecondary = !this.isSecondary;
     }
 
   }

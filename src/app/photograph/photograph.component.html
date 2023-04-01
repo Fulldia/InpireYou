@@ -1,0 +1,10 @@
+<div class="photographer">
+    <h2>{{photographers.name}}</h2>
+        <div class="app-photographer-image"><img [src]="photographers.imageURL" [alt]="photographers.name"/></div>
+    
+        <p class="card-text" *ngIf="photographers.description">{{photographers.description}}</p>
+        <P>📸 {{photographers.numberofpic}}</P>
+        <button type="button" class="btn btn-primary" (click)="photographLike()" [ngClass]="{'btn-success': buttonText==='Je n\'aime plus'}">{{buttonText}}</button>
+        <span>👍 {{photographers.likes}}</span>
+    
+    </div>

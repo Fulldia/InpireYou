@@ -2,7 +2,7 @@
 <h2>{{sharedSpot.title}}</h2>
     <div class="app-shared-spot-image"><img [src]="sharedSpot.imageURL" [alt]="sharedSpot.title"/></div>
 <p>
-    <button type="button" class="btn btn-primary" (click)="spotLike()" [ngClass]="{'bg-primary': isPrimary, 'bg-secondary': isSecondary}">{{buttonText}}</button>
-    👍 {{sharedSpot.likes}}
+    <button type="button" class="btn btn-primary" (click)="spotLike()" [ngClass]="{'btn-success': buttonText==='Je n\'aime plus'}">{{buttonText}}</button>
+    <span [ngStyle]="{ color : 'rgb(0,' + sharedSpot.likes*5 + ',0)'}">👍 {{sharedSpot.likes}}</span>
 </p>
 </div>
