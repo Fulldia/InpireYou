@@ -3,11 +3,13 @@
 }
 .section_shared{
     display: flex;
+    justify-content: space-between;
 }
 .container-shared-picture{
     display: flex;
     justify-content: space-evenly;
     flex-wrap:wrap;
+    width: 100%;
     margin: 20px;
 
 }

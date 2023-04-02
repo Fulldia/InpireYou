@@ -1,7 +1,7 @@
 export class Photograph {
     name!: string;             
     createdDate!: Date;   
-    likes!: number;  
+    follower!: number;  
     numberofpic!: number;
     imageURL!:string;
     description?:string;

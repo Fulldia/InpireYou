@@ -13,25 +13,21 @@ export class PhotographComponent implements OnInit {
 
   /*INITIALISATION DES VARIABLES*/
   ngOnInit(){ /*on initialise la donnée grâce à la méthode ngOnInit, implémenté par l'interface OnInit*/
-    this.buttonText="J'aime";
+    this.buttonText="Suivre";
   }
 
   /*METHODES ASSOCIES AU COMPOSANT*/
-  photographLike(){
+  photographFollower(){
     /*si pictureLike n'est pas cliqué, on incrémente*/
-    if (this.buttonText === "J'aime"){    
-      this.photographers.likes++;
-      this.buttonText="Je n'aime plus";   
+    if (this.buttonText === "Suivre"){    
+      this.photographers.follower++;
+      this.buttonText="✔️"; 
+   
     }
     /*si pictureLike est déjà cliqué, on décrémente*/
     else{    
-      this.photographers.likes--;
-      this.buttonText="J'aime";
+      this.photographers.follower--;
+      this.buttonText="Suivre";
     }
- 
-
-
-    
-  }
- 
+  } 
 }
