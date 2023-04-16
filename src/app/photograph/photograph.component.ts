@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Photograph } from '../models/photographer.model';
+import { PhotographerService } from '../services/photographer.service';
 
 @Component({
   selector: 'app-photograph',
@@ -11,6 +12,10 @@ export class PhotographComponent implements OnInit {
 
   buttonText!:string;
 
+  //Importer un service dans un component ! via une propriété
+  constructor(private photographerService: PhotographerService){ 
+  }
+
   /*INITIALISATION DES VARIABLES*/
   ngOnInit(){ /*on initialise la donnée grâce à la méthode ngOnInit, implémenté par l'interface OnInit*/
     this.buttonText="Suivre";
@@ -20,14 +25,13 @@ export class PhotographComponent implements OnInit {
   photographFollower(){
     /*si pictureLike n'est pas cliqué, on incrémente*/
     if (this.buttonText === "Suivre"){    
-      this.photographers.follower++;
-      this.buttonText="✔️"; 
-   
+      this.photographerService.pictureById(this.photographers.id, 'follower');
+      this.buttonText="✔️";   
     }
     /*si pictureLike est déjà cliqué, on décrémente*/
     else{    
-      this.photographers.follower--;
+      this.photographerService.pictureById(this.photographers.id, 'notfollower');
       this.buttonText="Suivre";
     }
-  } 
+  }
 }

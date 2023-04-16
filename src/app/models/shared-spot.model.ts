@@ -4,6 +4,7 @@
 
 //On déclare une classe avec ses propriétés
 export class SharedSpot {
+    id!:number;
     title!: string;             
     createdDate!: Date;   
     likes!: number;  

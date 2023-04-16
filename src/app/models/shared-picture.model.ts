@@ -5,6 +5,7 @@
 //On déclare une classe avec ses propriétés
 export class SharedPicture {
     //Ici on aurait pu créer un constructeur d'objet pour pouvoir réutiliser le modèle (mais on peut très bien ne pas le faire ex: modele spot)
+    id!:number;
     title!: string;
     description?: string; 
     createdDate!: Date;

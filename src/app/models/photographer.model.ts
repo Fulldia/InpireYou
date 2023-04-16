@@ -1,4 +1,5 @@
 export class Photograph {
+    id!:number;
     name!: string;             
     createdDate!: Date;   
     follower!: number;  

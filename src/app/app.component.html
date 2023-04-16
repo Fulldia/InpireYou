@@ -1,12 +1,9 @@
 <app-navbar></app-navbar>
 
 <section class="section_shared">
-    <div class="container-shared-picture">
-        <app-shared-picture *ngFor="let picture of sharedPicture" [sharedPicture]="picture" ></app-shared-picture> <!--picture = item / sharedPicture = nom du tableau -->
-        <app-shared-picture *ngFor="let picture of sharedPicture" [sharedPicture]="picture" ></app-shared-picture>
-    </div>
-    <div class="container-photograph">
-        <app-photograph *ngFor="let photographer of photographers" [photographers]="photographer" ></app-photograph>
-    </div>
+    
+    <app-shared-picture-list></app-shared-picture-list> <!--LISTE DES PHOTOS-->
+    
+    <app-photographer-list></app-photographer-list> <!--LISTE DES PHOTOGRAPHES-->
     
 </section>

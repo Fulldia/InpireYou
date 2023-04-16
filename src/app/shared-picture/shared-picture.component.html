@@ -1,10 +1,10 @@
-
+<!--UNE SEULE PHOTO-->
     <div class="card" style="width: 20rem;">
         <img class="card-img-top" [src]="sharedPicture.imageURL" [alt]="sharedPicture.title"/>
         <div class="card-body">
-          <h5 class="card-title">{{sharedPicture.title}} <span *ngIf="sharedPicture.location"> 📌{{sharedPicture.location}}</span></h5>
+          <h5 class="card-title">{{sharedPicture.title | uppercase}} <span *ngIf="sharedPicture.location"> 📌{{sharedPicture.location}}</span></h5>
           <p class="card-text" *ngIf="sharedPicture.description">{{sharedPicture.description}}</p>
-          <p class="card-text"><small class="text-muted">Mise en ligne le {{sharedPicture.createdDate}}</small></p>
+          <p class="card-text"><small class="text-muted">Mise en ligne le {{sharedPicture.createdDate | date: 'dd/MM/yyyy, à HH:mm' }}</small></p>
           <p>
             <button type="button" class="btn btn-primary" (click)="pictureLike()" [ngClass]="{'btn-success': buttonText==='Je n\'aime plus'}">{{buttonText}}</button>
             <span [ngStyle]="{ color : 'rgb(0,' + sharedPicture.likes*5 + ',0)'}">👍 {{sharedPicture.likes}}</span> <!--la valeur du vert augmente quand le nb de facesnap augmente-->

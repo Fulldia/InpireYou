@@ -1,5 +1,6 @@
 import { Component, OnInit, Input} from '@angular/core';
 import { SharedPicture } from '../models/shared-picture.model';
+import { SharedPictureService } from '../services/shared-picture.service';
 
 @Component({
   selector: 'app-shared-picture',
@@ -17,6 +18,10 @@ export class SharedPictureComponent implements OnInit {
 
   buttonText!:string;
 
+  //Importer un service dans un component ! via une propriété
+  constructor(private sharedPictureService: SharedPictureService){ 
+  }
+
   /*INITIALISATION DES VARIABLES*/
   ngOnInit(){ /*on initialise la donnée grâce à la méthode ngOnInit, implémenté par l'interface OnInit*/
     this.buttonText="J'aime";
@@ -26,17 +31,14 @@ export class SharedPictureComponent implements OnInit {
   pictureLike(){
     /*si pictureLike n'est pas cliqué, on incrémente*/
     if (this.buttonText === "J'aime"){    
-      this.sharedPicture.likes++;
+      this.sharedPictureService.pictureById(this.sharedPicture.id, 'like');
       this.buttonText="Je n'aime plus";   
     }
     /*si pictureLike est déjà cliqué, on décrémente*/
     else{    
-      this.sharedPicture.likes--;
+      this.sharedPictureService.pictureById(this.sharedPicture.id, 'unlike');
       this.buttonText="J'aime";
     }
- 
-
-
     
   }
  
